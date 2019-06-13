@@ -1,5 +1,7 @@
 from django.db import models
 from owner.models import Project
+from moneyfield import MoneyField
+
 # Create your models here.
 
 class Constructor(models.Model):
@@ -14,7 +16,10 @@ class Order(models.Model):
     project = models.ForeignKey(Project,on_delete=models.CASCADE)
     material = models.CharField(max_length=200)
     quantity = models.PositiveIntegerField(default=0)
-    price = models.
+    price = MoneyField(decimal_places=2,max_digits=8,currency_default='KSH')
+    delivery_date = models.DateField(auto_now=False,auto_now_add=False)
+    order_date = models.DateField(auto_now=False,auto_now=False)
+    
     
     
     
