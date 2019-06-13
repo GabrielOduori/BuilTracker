@@ -11,7 +11,7 @@ class Project(models.Model):
     startdate = models.DateField()
     enddate = models.DateField() 
     wallet = models.OneToOneField(Wallet,on_delete=models.CASCADE)
-    workers = models.PositiveIntegerField(default=0)
+    workers = models.PositiveIntegerField(default=0)  
     
     
     def __str__(self):

@@ -1,5 +1,5 @@
 from django.db import models
-
+from owner.models import Wallet,Project
 # Create your models here.
 
 class Financier(models.Model):
