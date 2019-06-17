@@ -18,4 +18,4 @@ class OwnerSignUpView(CreateView):
     def form_valid(self,form):
         user = form.save()
         login(self.request,user)
-        return redirect('owner:view_wallet')
+        return redirect('view_wallet')
