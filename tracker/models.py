@@ -10,4 +10,10 @@ class User(AbstractUser):
     
 
 
+class Financier(models.Model):
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
+    
+class Owner(models.Model):
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
+
 

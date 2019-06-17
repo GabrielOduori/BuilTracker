@@ -5,12 +5,14 @@ from requests.auth import HTTPBasicAuth
 # Create your views here.
 def index(request):
     
-    consumer_key = "gzAz06Sj8uOVgD7ACMfGlAEEFdIQ87Cs"
-    consumer_secret = "BQnGd8JrDM5e795n"
-    api_URL = "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials"
+    return render(request,'index.html') 
 
-    r = requests.get(api_URL, auth=HTTPBasicAuth(consumer_key, consumer_secret))
-
-    print (r.text)
+def create_wallet(request):
     
-    return render(request,'index.html')
+    return render(request,'financier.html')
+
+
+def view_wallet(request):
+    
+    return render(request,'owner.html')
+
