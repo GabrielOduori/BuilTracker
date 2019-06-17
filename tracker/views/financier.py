@@ -10,7 +10,6 @@ class FinancierSignUpView(CreateView):
     model = User
     form_class = FinancierSignUpForm
     template_name = 'registration/signup_form.html'
-    
     def get_context_data(self,**kwargs):
         kwargs['user_type'] = 'financier'
         return super().get_context_data(**kwargs)
@@ -19,3 +18,5 @@ class FinancierSignUpView(CreateView):
         user = form.save()
         login(self.request,user)
         return redirect('create_wallet')
+    
+   

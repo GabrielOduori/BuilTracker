@@ -15,13 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
-from tracker.views import financier,owner
+from tracker.views import financier,owner,views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url('',include('tracker.urls')),
-    url('^accounts/',include('django.contrib.auth.urls')),
-    url('accounts/signup',financier.FinancierSignUpView.as_view(),name='financier_signup'),
-    url('accounts/signup',owner.OwnerSignUpView.as_view(),name='owner_signup'),
-    
+    url(r'^accounts/',include('django.contrib.auth.urls')),
+    url(r'^accounts/signup/financier/',financier.FinancierSignUpView.as_view(),name='financier_signup'),
+    url(r'^accounts/signup/owner/',owner.OwnerSignUpView.as_view(),name='owner_signup'),
+    url('',include('tracker.urls')),   
 ]
