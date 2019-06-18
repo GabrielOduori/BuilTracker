@@ -124,10 +124,3 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Custom Django auth settings
-AUTH_USER_MODEL = 'tracker.User'
-
-LOGIN_URL = 'login'
-LOGOUT_URL = 'logout'
-
-LOGIN_REDIRECT_URL = 'index'
-LOGOUT_REDIRECT_URL = 'index'

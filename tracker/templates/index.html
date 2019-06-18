@@ -1,13 +1,76 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="row wow fadeIn" style="padding-top:80px;padding-left:300px;">
-<div class="col-md-6">
-<div class="card-group">
-<div class="card-body">
-<h2>Your current Balance is : 50</h2>
+    <div class="col-md-6">
+        <div class="card card-cascade hoverable" data-wow-delay='0.6s'>
+            <div>
+                <h3 class="card-title font-weight-light pull-left text-muted clearfix" style="letter-spacing:2px;">
+                    ACCOUNT</h3>
+            </div>
+            <div style="border-top:5px solid #E91E63;width:50px;" class="text-center">
+
+            </div>
+            <p class="card-text " style="font-size:18px;padding:15px;">
+                <i class="fas fa-money-bill-wave" style="font-size:90px;color:#E91E63 "></i> <span
+                    class="pull-right font-weight-light"
+                    style="font-size:40px;padding-left:80px;padding-bottom:50px;">KSH 450.00</span>
+            </p>
+            <a href="" class="btn btn-pink">ADD FUNDS</a>
+        </div>
+    </div>
+    <div class="col-md-6 " data-wow-delay='0.6s'>
+        <div class="card card-cascade hoverable wow fadeIn">
+            <div>
+                <h3 class="card-title font-weight-light pull-left text-muted clearfix" style="letter-spacing:2px;">
+                    TRANSACTIONS</h3>
+            </div>
+            <div style="border-top:5px solid #E91E63;width:50px;" class="text-center">
+
+            </div>
+            <p class="card-text " style="font-size:18px;padding:15px;">
+                <i class="fas fa-address-card" style="font-size:90px;color:#E91E63 "></i> <span
+                    class="pull-right font-weight-light" style="font-size:40px;padding-left:80px;padding-bottom:50px;">0
+                    </soan>
+            </p>
+            <a href="" class="btn btn-pink">TRANSACT NOW</a>
+        </div>
+    </div>
 </div>
+<!-- Second Row -->
+<div class="row wow fadeIn" style="padding-top:80px;padding-left:300px;">
+    <div class="col-md-6">
+        <div class="card card-cascade hoverable" data-wow-delay='0.6s'>
+            <div>
+                <h3 class="card-title font-weight-light pull-left text-muted clearfix" style="letter-spacing:2px;">
+                    FUNDS USAGE</h3>
+            </div>
+            <div style="border-top:5px solid #E91E63;width:50px;" class="text-center">
+
+            </div>
+            <p class="card-text " style="font-size:18px;padding:15px;">
+                <i class="far fa-chart-bar" style="font-size:90px;color:#E91E63 "></i> <span
+                    class="pull-right font-weight-light"
+                    style="font-size:20px;padding-left:80px;padding-bottom:50px;">Routine wallet usage statistics</span>
+            </p>
+            <a href="" class="btn btn-pink">VIEW GRAPH</a>
+        </div>
+    </div>
+    <div class="col-md-6 " data-wow-delay='0.6s'>
+        <div class="card card-cascade hoverable wow fadeIn">
+            <div>
+                <h3 class="card-title font-weight-light pull-left text-muted clearfix" style="letter-spacing:2px;">
+                HISTORY</h3>
+            </div>
+            <div style="border-top:5px solid #E91E63;width:50px;" class="text-center">
+
+            </div>
+            <p class="card-text " style="font-size:18px;padding:15px;">
+                <i class="far fa-clipboard" style="font-size:90px;color:#E91E63 "></i> <span
+                    class="pull-right font-weight-light" style="font-size:20px;padding-left:80px;padding-bottom:50px;">Check recent wallet activity
+                    </span>
+            </p>
+            <a href="" class="btn btn-pink">VIEW HISTORY</a>
+        </div>
+    </div>
 </div>
-</div>
-</div>
-<!-- Sidebar -->
 {% endblock %}
