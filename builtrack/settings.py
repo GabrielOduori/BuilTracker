@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,7 +24,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'vb$o+pgzq4wvtl8k9%9pkh15sqtijwf#gt&dzpd=!73g)ab@75'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
+
 DEBUG = True
+
+
 
 ALLOWED_HOSTS = []
 
@@ -40,12 +45,13 @@ INSTALLED_APPS = [
     'accounts',
     'home',
     'bootstrap4',
+    'checkouts',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
+    'django.middleware.common.CommonMiddleware', 
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -132,3 +138,26 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+if DEBUG:
+
+# #test keys
+
+# #Settigs for Braintree
+    BT_ENVIRONMENT='sandbox',
+    BT_MERCHANT_ID='snz94bz69xrtysfw',
+    BT_PUBLIC_KEY='9h8v24t83g2dyh4x',
+    BT_PRIVATE_KEY='9981ac0e29e5d113a063a993592ac463'
+
+
+else:
+    #live keys
+    BT_ENVIRONMENT='',
+    BT_MERCHANT_ID=''
+# if (len(sys.argv) >= 2 and sys.argv[1] == 'runserver'):
+#     BRAINTREE_PRODUCTION = False
+# else:
+#     BRAINTREE_PRODUCTION = True
+#     RAINTREE_MERCHANT_ID = 'snz94bz69xrtysfw'
+#     BRAINTREE_PUBLIC_KEY = '9h8v24t83g2dyh4x'
+#     BRAINTREE_PRIVATE_KEY = '9981ac0e29e5d113a063a993592ac463'
