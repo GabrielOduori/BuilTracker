@@ -582,6 +582,7 @@
 
 .ti-money:before {
     content: "\e68c";
+    font-size: 96px;
 }
 
 .ti-microphone:before {
@@ -1178,6 +1179,7 @@
 
 .ti-credit-card:before {
     content: "\e721";
+    font-size: 96px;
 }
 
 .ti-control-skip-forward:before {
@@ -1218,6 +1220,7 @@
 
 .ti-time:before {
     content: "\e72b";
+    font-size: 96px;
 }
 
 .ti-tumblr:before {
@@ -1448,4 +1451,7 @@
 
 .ti-5x {
     font-size: 5em;
+}
+.ti-credit-card {
+     font-size: 96px;
 }

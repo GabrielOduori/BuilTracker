@@ -36,6 +36,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'tracker',
+    'bootstrap4',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -84,8 +86,10 @@ WSGI_APPLICATION = 'builtrack.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'tracker',
+        'USER':'moringa',
+        'PASSWORD':'john123',
     }
 }
 
@@ -114,7 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
@@ -161,3 +165,4 @@ else:
 #     RAINTREE_MERCHANT_ID = 'snz94bz69xrtysfw'
 #     BRAINTREE_PUBLIC_KEY = '9h8v24t83g2dyh4x'
 #     BRAINTREE_PRIVATE_KEY = '9981ac0e29e5d113a063a993592ac463'
+# Custom Django auth settings
