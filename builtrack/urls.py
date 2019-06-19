@@ -23,10 +23,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-<<<<<<< HEAD
     url(r'^', include('home.urls', namespace = 'home')),
     url(r'^accounts/', include('registration.backends.simple.urls')),
-=======
     url('',include('tracker.urls')),   
->>>>>>> 8ba643ea718e7a646ac0d0fb54f49cac69cefa64
 ]
